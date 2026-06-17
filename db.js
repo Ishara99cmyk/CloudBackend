@@ -65,6 +65,8 @@ async function initializeDatabase() {
       ssl: {
         rejectUnauthorized: false
       },
+      enableKeepAlive: true,
+      keepAliveInitialDelay: 10000, // Send keep-alive packet every 10 seconds
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0
